@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
 import { Contact } from './schemas/contact.schema';
-import { CreateContact } from './dtos/create-contact.dto';
+import { CreateContactDto } from './dtos/create-contact.dto';
 
 @Injectable()
 export class ContactService {
@@ -11,7 +11,7 @@ export class ContactService {
     @InjectModel(Contact.name) private contactModel: Model<Contact>,
   ) {}
 
-  async create(Contact: CreateContact) {
+  async create(Contact: CreateContactDto) {
     const createdContact = new this.contactModel(Contact);
     return createdContact.save();
   }
