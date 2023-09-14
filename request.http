@@ -1,11 +1,12 @@
 POST http://localhost:3000/contact HTTP/1.1
 Content-Type: application/json
+Authorization: Basic am9zZWxpbmU6MTIzNA==
 
 {
-    "nombre": "Noemy",
-    "correo_electronico": "hola@gmail.com",
-    "compania": "holi",
-    "telefono": 23345,
-    "mensaje": "Learn nest js and create a project"
+    "nombre": "Duenas",
+    "correo_electronico": "rosa@gmail.com",
+    "compania": "Noemyo",
+    "telefono": 50598140,
+    "mensaje": "Learn nes js and create a project"
 }
 
